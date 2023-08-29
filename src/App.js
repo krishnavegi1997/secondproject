@@ -5,8 +5,8 @@ import Todolist from './Components/Todolist/Todolist'
 function App() {
   return (
    <div>
-    <Counter/>
-    <Todolist/>
+    <Counter></Counter>
+    <Todolist></Todolist>
    </div>
   )
 }
