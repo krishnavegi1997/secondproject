@@ -6,7 +6,7 @@ function App() {
   return (
    <div>
     <Counter/>
-    <Todolist></Todolist>
+    <Todolist/>
    </div>
   )
 }
