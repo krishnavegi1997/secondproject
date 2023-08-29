@@ -5,14 +5,14 @@ function Counter() {
     function inc(){
         setCount(count+1)
     }
-    function Dec(){
+    function dec(){
         setCount(count-1)
     }
   return (
     <div>
        <h1>{count}</h1>
        <button onClick={()=>{inc()}}>Increment</button> 
-       <button onClick={()=>{Dec()}}>Decrement</button>
+       <button onClick={()=>{dec()}}>Decrement</button>
     </div>
   )
 }
