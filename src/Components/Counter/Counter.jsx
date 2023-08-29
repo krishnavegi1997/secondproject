@@ -6,7 +6,7 @@ function Counter() {
         setCount(count+1)
     }
     function dec(){
-        setCount(count-1)
+        setCount(count-2)
     }
   return (
     <div>
