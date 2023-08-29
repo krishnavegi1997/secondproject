@@ -1,5 +1,5 @@
 import React from 'react'
-import Counter from './Components/Counter/Counter'
+import Counter from './Components/Counter/Todolist'
 
 function App() {
   return (
