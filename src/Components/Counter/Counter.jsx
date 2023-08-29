@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 function Counter() {
-    var [count,setCount]=useState(0);
+    var [count,setCount]=React.useState(0);
     function inc(){
         setCount(count+1)
     }
