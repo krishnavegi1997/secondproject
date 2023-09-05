@@ -1,14 +1,42 @@
-import React from 'react';
+import React, { Children } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import ApiCall from './Components/Apicall/Apicall'
+import Product from './Components/Product'
 import reportWebVitals from './reportWebVitals';
+import {createBrowserRouter,RouterProvider} from 'react-router-dom'
+import ApiDetails from './Components/Apicall/ApiDetails';
 
+const router =createBrowserRouter([
+    {
+        path:"/",
+        element:<App/>,
+        children:[
+            {
+                path:"/apicall",
+                element:<ApiCall/>,
+                children:[
+                    {
+                        path:'/apicall/apidetails/:cname',
+                        element:<ApiDetails/>
+                    }
+                    
+                ]
+            },
+            {
+                path:'/product',
+                element:<Product/>
+            }
+        ]
+    },
+    
+])
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+
+    <RouterProvider router={router}/>
+
 );
 
 // If you want to start measuring performance in your app, pass a function
