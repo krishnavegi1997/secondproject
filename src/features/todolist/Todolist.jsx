@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import {useDispatch, useSelector} from 'react-redux'
-import { addTodo } from './todoSlice'
+import { addTodo, deleteTodo } from './todoSlice'
 function Todolist() {
   const [nt,setNt]=useState('')
   const {todos}=useSelector((state)=>{return state.t})
@@ -12,7 +12,10 @@ function Todolist() {
       <ul>
         {
           todos.map((todo,i)=>{
-             return <li key={i}>{todo}</li>
+             return <li key={i}>
+              {todo}
+              <button onClick={()=>{dispatch(deleteTodo(i))}}>Delete</button>
+              </li>
           })
         }
       </ul>
