@@ -1,1 +1,18 @@
 @import url('../node_modules//bootstrap/dist/css/bootstrap.min.css');
+.mybox{
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+#books{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#books li{
+   border: 1px solid;
+   padding: 10px;
+   margin: 10px;
+   width: 150px;
+   list-style: none; 
+}
